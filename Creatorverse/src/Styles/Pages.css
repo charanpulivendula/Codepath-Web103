@@ -1,0 +1,147 @@
+
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #000000; /* Black background */
+  color: #ffffff; /* White text */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.hero h1 {
+  font-size: 4rem; /* Larger text for header */
+  color: #32cd32; /* Parrot green for header text */
+  margin-bottom: 1rem;
+}
+
+.cta.button {
+  background-color: #32cd32; /* Parrot green button */
+  color: #000000; /* Black text on button */
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cta.button:hover {
+  background-color: #228b22; /* Darker parrot green on hover */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
+  gap: 2rem;
+  justify-content: center;
+}
+
+.grid p {
+  grid-column: span 3; /* Centering the "No creators found" message across all columns */
+  text-align: center;
+  font-size: 1.25rem;
+  color: #32cd32; /* Parrot green text */
+}
+
+.card {
+  background-color: #444444; /* Slightly lighter grey for cards */
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7);
+}
+
+.card-header h3 {
+  color: #32cd32; /* Parrot green for card titles */
+}
+
+.card-description {
+  color: #ffffff; /* White for card descriptions */
+}
+
+.card-footer .button {
+  background-color: #32cd32; /* Parrot green buttons */
+  color: #000000; /* Black text on buttons */
+  padding: 0.75rem 1rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 1rem;
+}
+
+.card-footer .button:hover {
+  background-color: #228b22; /* Darker parrot green on hover */
+}
+
+.card-footer .secondary.button {
+  background-color: #555555; /* Dark grey for secondary buttons */
+  color: #ffffff; /* White text on secondary buttons */
+}
+
+.card-footer .secondary.button:hover {
+  background-color: #666666; /* Lighter grey on hover */
+}
+
+/* Additional global color variables */
+:root {
+  --color-primary: #32cd32; /* Parrot green */
+  --color-primary-dark: #228b22; /* Darker parrot green */
+  --color-background: #333333; /* Dark grey */
+  --color-foreground: #ffffff; /* White */
+}
+
+
+/* Typing animation */
+.typing {
+  font-size: 4rem;
+  color: #32cd32; /* Parrot green for header text */
+  margin-bottom: 1rem;
+  text-align: center;
+  border-right: 0.15em solid #32cd32; /* Parrot green for cursor */
+  white-space: nowrap;
+  overflow: hidden;
+  width: 17ch; /* Set width to the length of the text "Creatorverse" */
+  animation: typing 3s steps(11, end) 0s 1 normal both, 
+             deleting 3s steps(11, end) 3s 1 normal both,
+             blink-caret 0.75s step-end infinite,
+             loop-animation 6s infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 11ch; } /* Adjust to the length of the word "Creatorverse" */
+}
+
+@keyframes deleting {
+  from { width: 11ch; }
+  to { width: 0; }
+}
+
+@keyframes loop-animation {
+  from { width: 0; }
+  to { width: 11ch; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #32cd32; }
+}

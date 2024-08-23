@@ -22,6 +22,7 @@ const ViewCreator = () => {
     <div>
       {creator ? (
         <>
+         <img height={100} width={100} src={creator.image_url} alt = "creator img"/>
           <h1>{creator.name}</h1>
           <p>{creator.description}</p>
           <a href={creator.URL} target="_blank" rel="noopener noreferrer">Visit Channel</a>

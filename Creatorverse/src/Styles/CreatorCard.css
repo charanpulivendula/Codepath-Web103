@@ -1,0 +1,81 @@
+.card {
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  background-color: var(--color-background);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 400px;
+  cursor: pointer;
+  margin: 1rem;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card-header h3 {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.card-description {
+  margin: 1rem 0;
+  color: var(--color-foreground);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-footer .button {
+  flex: 1;
+  margin-right: 0.75rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.card-footer .button:last-child {
+  margin-right: 0;
+}
+
+.contrast.button {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  padding:0.5rem;
+  text-align: center;
+  width: 150px;
+  border: none;
+  
+}
+
+.contrast.button:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.secondary.button {
+  color: var(--color-primary);
+  text-align: center;
+  margin-top: 10px;
+  border: none;
+}
+
+.secondary.button:hover {
+  background-color: var(--color-secondary-dark);
+}
+

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { supabase } from '../client';
-import CreatorCard from '../components/CreatorCard';
 import { Link } from 'react-router-dom';
-import './Pages.css';
+import CreatorCard from '../components/CreatorCard';
+import '../Styles/Pages.css';
 
 const ShowCreators = () => {
   const [creators, setCreators] = useState([]);
@@ -19,19 +19,14 @@ const ShowCreators = () => {
   }, []);
 
   return (
-    <div className="container">
+    <div className="main-container">
       <header className="hero">
-        <h1>Creatorverse</h1>
-        <p>Your hub for discovering and managing content creators.</p>
-        <Link to="/add" className="contrast button">Add New Creator</Link>
+        <h1 className="typing">Creatorverse</h1>
+        <Link to="/add" className="cta button">Add New Creator</Link>
       </header>
       
       <section className="grid">
-        {creators.length > 0 ? (
-          creators.map((creator) => <CreatorCard key={creator.id} creator={creator} />)
-        ) : (
-          <p>No creators found.</p>
-        )}
+          {creators.map((creator) => <CreatorCard key={creator.id} creator={creator} />)}
       </section>
     </div>
   );

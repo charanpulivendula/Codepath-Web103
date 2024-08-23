@@ -4,6 +4,7 @@ import ShowCreators from './pages/ShowCreators.jsx';
 import ViewCreator from './pages/ViewCreator.jsx';
 import AddCreator from './pages/AddCreator.jsx';
 import EditCreator from './pages/EditCreator.jsx';
+import InfoPage from './pages/InfoPage.jsx';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/view/:id" element={<ViewCreator/>} />
         <Route path="/add" element={<AddCreator/>} />
         <Route path="/edit/:id" element={<EditCreator/>} />
+        <Route path="/info/:id" element={<InfoPage/>}/>
       </Routes>
     </Router>
   );
