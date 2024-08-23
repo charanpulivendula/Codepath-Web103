@@ -115,7 +115,6 @@ body {
   font-size: 4rem;
   color: #32cd32; /* Parrot green for header text */
   margin-bottom: 1rem;
-  text-align: center;
   border-right: 0.15em solid #32cd32; /* Parrot green for cursor */
   white-space: nowrap;
   overflow: hidden;
